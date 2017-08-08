@@ -57,6 +57,13 @@ function bmi_keisan(){
   // bmi計算
   bmi = weight /  ((height / 100) ^ 2);
 
-  // bmi計算結果を警告ダイアログに表示する
-  alert("あなたのBMIは" + bmi + "ですよ");
+  // bmiが正常値前提で10から50までの前提
+  if (bmi > 10 && bmi > 50) {
+    // bmi計算結果を警告ダイアログに表示する
+    alert("あなたのBMIは" + bmi + "ですよ");
+  } else {
+    //異常な数値のエラー
+    alert("異常な数値です");
+  }
+
 }

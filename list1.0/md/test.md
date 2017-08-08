@@ -5,4 +5,4 @@
 <pre><code>
 #include<stdio.h> 
   int main
-</pre></cede>
+</cede></pre>

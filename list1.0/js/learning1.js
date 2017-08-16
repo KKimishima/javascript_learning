@@ -4,7 +4,8 @@
 bmi_keisan();
 
 // コンソール呼び出し関数
-consol();
+// 一時的にコメントアウト
+//consol();
 
 // コンソール呼び出し
 function consol(){
@@ -46,24 +47,29 @@ function consol(){
 function bmi_keisan(){
 
   // 簡単な計算処理
-  var weight;   // 体重
-  var height;   // 身長
-  var bmi;      // BMI計算結果
-
+  var weight;     // 体重
+  var height;     // 身長
+  var bmi;        // BMI計算結果
+  var print_messe // 表示するメッセージ
+  // メッセージ表示
+  alert("BMIを測定致します。");
+  
   // 数値を入力
-  weight = prompt("BMIを測定致します。体重を(kg)を入力してください");
-  height = prompt("続いて身長(cm)を入力してください");
+  weight = prompt("体重(kg)を入力してください");
+  height = prompt("身長(cm)を入力してください");
 
   // bmi計算
-  bmi = weight /  ((height / 100) ^ 2);
-
+  bmi = weight / ((height/ 100) ^ 2);
+  
+  // 実数を少数に変換
+  //
+  bmi =  Math.floor(bmi);
   // bmiが正常値前提で10から50までの前提
-  if (bmi > 10 && bmi > 50) {
+  if (bmi > 10 && bmi < 50) {
     // bmi計算結果を警告ダイアログに表示する
     alert("あなたのBMIは" + bmi + "ですよ");
   } else {
     //異常な数値のエラー
     alert("異常な数値です");
   }
-
 }

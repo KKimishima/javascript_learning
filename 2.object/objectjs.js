@@ -92,3 +92,10 @@ let d2 = new Date("2020/1/1 00:00")
 
 console.log(d1.toLocaleDateString())
 console.log(d2.toLocaleString())
+
+// 正規表現
+let re1 = new RegExp()
+
+// オブジェクト生成
+let obj = { x: 1, y: 2, z: 3 }
+

@@ -14,7 +14,7 @@
   <p>domの要素を取得</p>
   <p id="d1">domの要素を取得</p>
   <ul>
-    <li>
+    <li id="list">
       <a href="http://hoge1.com">hoge1</a>
       <a href="http://hoge2.com">hoge2</a>
       <a href="http://hoge3.com">hoge3</a>
@@ -25,6 +25,19 @@
     </li>
   </ul>
   <input id="time" type="time" name="time">
+
+  <form>
+    <label for="food">好きな食べ物</label>
+    <select name="food" id="food">
+      <option value="ラーメン">ラーメン</option>
+      <option value="カレー">カレー</option>
+      <option value="餃子">餃子</option>
+    </select>
+    <input type="submit" value="送信">
+  </form>
+
+  <input id="d6" type="button" value="ダイアログ表示">
+  <input id="d7" type="button" value="イベントリスナー">
 </body>
 
 </html>

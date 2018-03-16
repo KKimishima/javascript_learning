@@ -12,7 +12,9 @@
 <body>
   <h1>JSのDOM学習</h1>
   <p>domの要素を取得</p>
-  <p id="d1">domの要素を取得</p>
+  <p id="d1">domの要素を
+    <strong>取得</strong>
+  </p>
   <ul>
     <li id="list">
       <a href="http://hoge1.com">hoge1</a>
@@ -38,6 +40,82 @@
 
   <input id="d6" type="button" value="ダイアログ表示">
   <input id="d7" type="button" value="イベントリスナー">
+  <p>
+    <a id="d9" href="http://hoge">アトリビュート取得</a>
+  </p>
+  <img id="d10" src="http://4.bp.blogspot.com/-hko-old-diQ/WdMyjmpC3SI/AAAAAAABHRw/JKqfmklVJDoXQCpdh_ZG-KvZJAfYN0KPwCLcBGAs/s800/kids_chuunibyou_girl.png"
+    alt="リンクテスト" height="100" width="100">
+
+  <div id="d11">
+    <p id="d11-1" style="color:red">
+      テキスト変更前
+    </p>
+  </div>
+  <div>
+    <p id="d11-2" style="color:red">
+      innreHTML変更前
+      <a href="http://hoge">hoge</a>
+    </p>
+  </div>
+  <input id="d11-0" type="button" value="テキスト差し替え">
+
+  <form>
+    <label for="name">名前</label>
+    <input type="text" name="name" id="d12-2" />
+    <input id="d12" type="button" value="送信">
+  </form>
+  <p id="d12-1"></p>
+
+  <form>
+    <div>
+      <label>
+        <input type="checkbox" name="food13" class="d13" value="ラーメン"> ラーメン
+      </label>
+      <label>
+        <input type="checkbox" name="food13" class="d13" value="カレー"> カレー
+      </label>
+      <label>
+        <input type="checkbox" name="food13" class="d13" value="餃子">餃子
+      </label>
+      <input type="button" value="送信" id="d13-0">
+    </div>
+  </form>
+
+  <form>
+    <div>
+      <label>
+        <input type="radio" name="food14" value="ラーメン"> ラーメン
+      </label>
+      <label>
+        <input type="radio" name="food14" value="カレー"> カレー
+      </label>
+      <label>
+        <input type="radio" name="food14" value="餃子">餃子
+      </label>
+      <input type="button" value="送信" id="d14-0">
+    </div>
+  </form>
+
+  <form>
+    <div>
+      <label>
+        <input type="checkbox" name="food15" value="ラーメン"> ラーメン
+      </label>
+      <label>
+        <input type="checkbox" name="food15" value="カレー"> カレー
+      </label>
+      <label>
+        <input type="checkbox" name="food15" value="餃子">餃子
+      </label>
+      <input type="button" value="送信" id="d15-0">
+    </div>
+  </form>
+
+  <form>
+    <label for="file">ファイル</label>
+    <input type="file" name="file" id="d16" multiple>
+  </form>
+
 </body>
 
 </html>

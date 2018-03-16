@@ -13,6 +13,8 @@ import { D12 } from "./dom"
 import { D13 } from "./dom"
 import { D14 } from "./dom"
 import { D15 } from "./dom"
+import { D16 } from "./dom"
+import { D17 } from "./dom"
 
 let d1 = D1
 let d2 = D2
@@ -28,6 +30,8 @@ let d12 = D12
 let d13 = D13
 let d14 = D14
 let d15 = D15
+let d16 = D16
+// let d17 = D17
 // let d7 = D7
 
 d8()
@@ -36,6 +40,8 @@ d12()
 d13()
 d14()
 d15()
+d16()
+// d17()
 
 window.onload = () => {
   d1()

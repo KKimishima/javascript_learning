@@ -146,16 +146,30 @@ export function D15() {
 export function D16() {
   window.addEventListener("DOMContentLoaded", () => {
     document.getElementById("d16").addEventListener("change", (e) => {
-      window.alert("hoge")
       let inFile = document.getElementById("d16").files
       let re = [];
       for (let i of inFile) {
-        re.push(`ファイル名:${i.name}`)
-        re.push(`ファイル種類:${i.type}`)
-        re.push(`ファイル名:${i.size / 1024}KB`)
-        re.push(`ファイルの最終更新日:${i.lastModifiedDate}`)
+        re.push(`ファイル名:${i.name}\n`)
+        re.push(`ファイル種類:${i.type}\n`)
+        re.push(`ファイル名:${i.size / 1024}KB\n`)
+        re.push(`ファイルの最終更新日:${i.lastModifiedDate.toLocaleString()}`)
       }
       window.alert(re.toString())
     }, true)
   })
 }
+
+// export function D17() {
+  // window.addEventListener('DOMContentLoaded', function () {
+    // document.getElementById("d16").addEventListener('change', function (e) {
+      // var inputs = document.getElementById("d16").files;
+      // for (var i = 0, len = inputs.length; i < len; i++) {
+        // var input = inputs[i];
+        // console.log('ファイル名：' + input.name);
+        // console.log('種類：' + input.type);
+        // console.log('サイズ：' + input.size / 1024 + 'KB');
+        // console.log('最終更新日：' + input.lastModifiedDate);
+      // }
+    // }, true);
+  // });
+// }

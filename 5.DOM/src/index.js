@@ -15,6 +15,14 @@ import { D14 } from "./dom"
 import { D15 } from "./dom"
 import { D16 } from "./dom"
 import { D17 } from "./dom"
+import { D18 } from "./dom"
+import { D19 } from "./dom"
+import { D20 } from "./dom"
+import { D21 } from "./dom"
+import "./style.css"
+import { D22 } from "./dom"
+import { D23 } from "./dom"
+import { D24 } from "./dom"
 
 let d1 = D1
 let d2 = D2
@@ -31,7 +39,14 @@ let d13 = D13
 let d14 = D14
 let d15 = D15
 let d16 = D16
-// let d17 = D17
+let d17 = D17
+let d18 = D18
+let d19 = D19
+let d20 = D20
+let d21 = D21
+let d22 = D22
+let d23 = D23
+let d24 = D24
 // let d7 = D7
 
 d8()
@@ -41,7 +56,14 @@ d13()
 d14()
 d15()
 d16()
-// d17()
+d17()
+d18()
+d19()
+d20()
+d21()
+d22()
+d23()
+d24()
 
 window.onload = () => {
   d1()

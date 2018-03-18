@@ -159,17 +159,156 @@ export function D16() {
   })
 }
 
-// export function D17() {
-  // window.addEventListener('DOMContentLoaded', function () {
-    // document.getElementById("d16").addEventListener('change', function (e) {
-      // var inputs = document.getElementById("d16").files;
-      // for (var i = 0, len = inputs.length; i < len; i++) {
-        // var input = inputs[i];
-        // console.log('ファイル名：' + input.name);
-        // console.log('種類：' + input.type);
-        // console.log('サイズ：' + input.size / 1024 + 'KB');
-        // console.log('最終更新日：' + input.lastModifiedDate);
-      // }
-    // }, true);
-  // });
-// }
+export function D17() {
+  window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("d17").addEventListener("change", (e) => {
+      const inText = document.getElementById("d17").files[0]
+      const reader = new FileReader()
+      reader.addEventListener("load", () => {
+        document.getElementById("d17-0").textContent =
+          reader.result;
+      }, true)
+      reader.addEventListener('error', function () {
+        console.log(reader.error.message);
+      }, true);
+      reader.readAsText(inText, "UTF-8")
+      // reader.abort()
+    }, true)
+  })
+}
+
+export function D18() {
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("d18-3").addEventListener("click", () => {
+      // 要素を取得
+      const name = document.getElementById("d18-1")
+      const url = document.getElementById("d18-2")
+
+      console.log(`name = ${name.value}:url = ${url.value}`)
+
+      // a要素を作製
+      let a = document.createElement("a")
+      // a要素のオプションをつける
+      a.href = url.value
+
+      const text = document.createTextNode(name.value)
+      a.appendChild(text)
+
+      let br = document.createElement("br")
+      let list = document.getElementById("d18-4")
+
+      list.appendChild(a)
+      list.appendChild(br)
+    }, false)
+
+  }, false)
+}
+
+export function D19() {
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("d19-0").addEventListener("click", () => {
+      let frag = document.createDocumentFragment();
+      const books = [
+        { ti: "本1", pe: 1000 },
+        { ti: "本2", pe: 2000 },
+        { ti: "本3", pe: 3000 }
+      ];
+      for (const d of books) {
+        const li = document.createElement("li")
+        const text = document.createTextNode(`${d.ti}:${d.pe}円`)
+        li.appendChild(text)
+        frag.appendChild(li)
+      }
+      let list = document.getElementById("d19").appendChild(frag)
+    }, false)
+  }, false)
+}
+
+export function D20() {
+  document.addEventListener("DOMContentLoaded", () => {
+    let list = document.getElementById("d20")
+    let pic = document.getElementById("d20-1")
+    let del = document.getElementById("d20-2")
+
+    list.addEventListener("click", (e) => {
+      const data = e.target.getAttribute("data-hoge")
+      // dataが取得できた場合実行
+      if (data) {
+        let img = document.createElement("img")
+        img.src = `http://2.bp.blogspot.com/${data}.png`
+        // img.alt = e.innerHTML
+        img.alt = "ほげ"
+        img.height = 100
+        img.width = 100
+        // <div>要素配下に<img>要素が存在するか確認
+        if (pic.getElementsByTagName("img").length > 0) {
+          pic.replaceChild(img, pic.lastChild)
+        } else {
+          del.disabled = false
+          pic.appendChild(img)
+        }
+      }
+    }, false)
+    del.addEventListener("click", () => {
+      pic.removeChild(pic.lastChild)
+      del.disabled = true
+    }, false)
+  }, false)
+}
+
+export function D21() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const ele = document.getElementById("d21")
+
+    ele.addEventListener("mouseover", () => {
+      ele.style.backgroundColor = "red"
+    }, false)
+    ele.addEventListener("mouseout", () => {
+      ele.style.backgroundColor = ""
+    }, false)
+  }, false)
+}
+
+export function D22() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const ele = document.getElementById("d22")
+    ele.addEventListener("mouseover", () => {
+      ele.className = "hl"
+    }, false)
+    ele.addEventListener("mouseout", () => {
+      ele.className = ""
+    }, false)
+  })
+}
+
+export function D23() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const ele = document.getElementById("d23")
+    ele.addEventListener("click", function () {
+      this.classList.toggle("hl")
+    }, false)
+  })
+}
+
+export function D24() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const inner = document.getElementById("d24-in")
+    const out = document.getElementById("d24-out")
+
+    inner.addEventListener("click", (e) => {
+      window.alert("innerリスナ発生")
+      // e.stopPropagation(); outer実行をブロック
+      // e.stopImmediatePropagation();　linnerリスナ２をブロック
+      e.preventDefault()  //リンクだけカット
+    }, false)
+
+    inner.addEventListener("click", (e) => {
+      window.alert("innerリスナ2発生")
+    }, false)
+
+    out.addEventListener("click", (e) => {
+      window.alert("outリスナ発生")
+    }, false)
+
+  }, false)
+}

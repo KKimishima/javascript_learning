@@ -3,3 +3,8 @@
 4.class/node_modules/
 5.DOM/node_modules/
 6.client/node_modules/
+6.1.express/node_modules/
+6.2.Ajax/node_modules/
+ApiServer/.idea/
+ApiServer/target/
+*.iml

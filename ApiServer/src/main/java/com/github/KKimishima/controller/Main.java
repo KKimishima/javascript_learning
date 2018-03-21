@@ -32,7 +32,7 @@ public class Main extends HttpServlet{
     if (!name.isEmpty()){
       NameBean nameBean = new NameBean(name);
       req.setAttribute("nameBean",nameBean);
-    }
+  }
 
     RequestDispatcher rd = req.getRequestDispatcher(
         "WEB-INF/main.jsp"

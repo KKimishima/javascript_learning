@@ -9,13 +9,14 @@ module.exports = {
   // ファイルの出力設定
   output: {
     // 出力ファイル名
+    path: "/Volumes/data/Repo/learn_js/ApiServer/src/main/webapp/",
     filename: 'main.js'
   },
   devServer: {
     contentBase: 'dist',
     open: true,
     port: 3003
-  },
+  }/*,
   module: {
     rules: [
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
@@ -41,5 +42,5 @@ module.exports = {
     ],
     // node_modules は除外する
     // exclude: /node_modules/,
-  }
+  }*/
 };
